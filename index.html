@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Portal 2025 - Connect • Grow • Inspire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landingPage" class="page active">
+        <div class="hero-section">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">One Alumni</span>
+                        <span class="year-badge">2025</span>
+                    </h1>
+                    <p class="hero-subtitle">Connect • Grow • Inspire</p>
+                    <p class="hero-description">Join our vibrant community of graduates making a difference worldwide. Network, mentor, and create lasting impact.</p>
+                </div>
+                
+                <div class="role-selection">
+                    <h2>Choose Your Role</h2>
+                    <div class="role-cards">
+                        <div class="role-card" data-role="alumni">
+                            <div class="role-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Alumni</h3>
+                            <p>Connect with fellow graduates, mentor students, and share your journey</p>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="role-card" data-role="admin">
+                            <div class="role-icon">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <h3>Admin</h3>
+                            <p>Manage the community, organize events, and foster connections</p>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="role-card" data-role="student">
+                            <div class="role-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <h3>Student</h3>
+                            <p>Find mentors, explore opportunities, and prepare for your future</p>
+                            <div class="card-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating Elements -->
+            <div class="floating-elements">
+                <div class="float-item float-1"></div>
+                <div class="float-item float-2"></div>
+                <div class="float-item float-3"></div>
+                <div class="float-item float-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Welcome Back</h2>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <div class="input-container">
+                            <input type="email" id="email" class="form-input" required>
+                            <label for="email" class="form-label">Email Address</label>
+                            <div class="input-underline"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-container">
+                            <input type="password" id="password" class="form-input" required>
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-underline"></div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <span>Sign In</span>
+                        <div class="btn-ripple"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboardPage" class="page">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <span class="gradient-text">Alumni Portal</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                    <i class="fas fa-chart-line"></i> Dashboard
+                </a>
+                <a href="#directory" class="nav-item" data-section="directory">
+                    <i class="fas fa-address-book"></i> Directory
+                </a>
+                <a href="#events" class="nav-item" data-section="events">
+                    <i class="fas fa-calendar"></i> Events
+                </a>
+                <a href="#announcements" class="nav-item" data-section="announcements">
+                    <i class="fas fa-bullhorn"></i> News
+                </a>
+            </div>
+            <div class="nav-profile">
+                <div class="profile-avatar">
+                    <img src="https://via.placeholder.com/40x40?text=U" alt="User">
+                </div>
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard-section" class="content-section active">
+                <div class="page-header">
+                    <h1>Dashboard</h1>
+                    <p>Welcome back! Here's what's happening in your community.</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-gradient-blue">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalAlumni">1,250</h3>
+                            <p>Total Alumni</p>
+                        </div>
+                        <div class="stat-trend">
+                            <span class="trend-up">+12%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-gradient-orange">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="activeUsers">456</h3>
+                            <p>Active Users</p>
+                        </div>
+                        <div class="stat-trend">
+                            <span class="trend-up">+8%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-gradient-green">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="eventAttendance">89</h3>
+                            <p>Event Attendance</p>
+                        </div>
+                        <div class="stat-trend">
+                            <span class="trend-up">+15%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-gradient-purple">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="mentorshipConnections">34</h3>
+                            <p>Mentorship Connections</p>
+                        </div>
+                        <div class="stat-trend">
+                            <span class="trend-up">+23%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Priya Sharma</strong> joined the network</p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-calendar"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p>New event: <strong>Annual Alumni Meet 2025</strong></p>
+                                    <span class="activity-time">5 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p>Announcement: <strong>New Portal Features</strong></p>
+                                    <span class="activity-time">1 day ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3>Upcoming Events</h3>
+                        <div class="event-list">
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="month">Oct</span>
+                                    <span class="day">05</span>
+                                </div>
+                                <div class="event-info">
+                                    <h4>Tech Talk: AI in Industry</h4>
+                                    <p>4:00 PM • Engineering Block</p>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="month">Oct</span>
+                                    <span class="day">20</span>
+                                </div>
+                                <div class="event-info">
+                                    <h4>Career Development Workshop</h4>
+                                    <p>2:00 PM • Virtual Event</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Directory Section -->
+            <section id="directory-section" class="content-section">
+                <div class="page-header">
+                    <h1>Alumni Directory</h1>
+                    <p>Connect with fellow alumni from around the world.</p>
+                </div>
+                
+                <div class="search-bar">
+                    <div class="search-input-container">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search alumni by name, company, or location..." id="searchInput">
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="mentors">Mentors</button>
+                        <button class="filter-btn" data-filter="recent">Recent Grads</button>
+                    </div>
+                </div>
+
+                <div class="directory-grid" id="directoryGrid">
+                    <!-- Alumni cards will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Events Section -->
+            <section id="events-section" class="content-section">
+                <div class="page-header">
+                    <h1>Events</h1>
+                    <p>Join upcoming events and connect with your community.</p>
+                </div>
+                
+                <div class="events-grid" id="eventsGrid">
+                    <!-- Event cards will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Announcements Section -->
+            <section id="announcements-section" class="content-section">
+                <div class="page-header">
+                    <h1>Announcements</h1>
+                    <p>Stay updated with the latest news and updates.</p>
+                </div>
+                
+                <div class="announcements-list" id="announcementsList">
+                    <!-- Announcements will be populated by JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Success Toast -->
+    <div id="successToast" class="toast hidden">
+        <i class="fas fa-check-circle"></i>
+        <span>Action completed successfully!</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
